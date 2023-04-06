@@ -1,0 +1,17 @@
+mode = max
+left_border = 0
+right_border = 4
+population_volume = 25
+max_iters = 100
+quality_epsilon = 0.00001
+max_valueless_iters = 10
+enough_function_value = 5
+preserved_high_positions = 0.04
+preserved_low_positions = 0
+selection_mode = cut
+cut_part = 0.2
+crossbreeding_mode = two-point
+crossing_part = 1
+mutation_method = reverse
+variability = 0.5
+debug_file = log

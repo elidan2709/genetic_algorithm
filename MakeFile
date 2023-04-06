@@ -1,0 +1,13 @@
+ASM_PREFIX = wine
+ASSEMBLER = ml
+ASSEMBLER_FLAGS = -c -coff
+COMPILER_PREFIX = wine
+COMPILER = fpc
+COMPILER_FLAGS =
+
+
+main.exe: main.pas BitOperations.pas ConfigParser.pas Entity.pas ImplementModule.pas MasmModule.pas MasmModule.obj PopulationModule.pas Selection.pas
+	$(COMPILER_PREFIX) $(COMPILER) $(COMPILER_FLAGS) main.pas
+
+MasmModule.obj: MasmModule.asm
+	$(ASM_PREFIX) $(ASSEMBLER) $(ASSEMBLER_FLAGS) $^
